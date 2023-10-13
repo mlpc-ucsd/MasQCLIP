@@ -16,7 +16,7 @@ Please refer to [installation instructions](https://github.com/facebookresearch/
 
 #### Base-novel Setting
 
-To train a model under base-novel setting (on COCO-instance), run
+In the base-novel setting, the model is trained on the base classes and tested on novel classes. To train a model under base-novel setting (on COCO-instance), run
 
 ```shell
 # Progressive Distillation
@@ -36,7 +36,7 @@ python train_net.py --eval-only --num-gpus 4 --config-file configs/base-novel/co
 
 #### Cross-dataset Setting
 
-To train a model under cross-dataset setting (on COCO-panoptic), run
+In the cross-dataset setting, the model is trained on one dataset e.g., COCO, and tested on another dataset e.g., ADE20K. To train a model under cross-dataset setting (on COCO-panoptic), run
 
 ```shell
 # Progressive Distillation
@@ -63,22 +63,13 @@ Pre-trained models can be found in this Google Drive [link](https://drive.google
 
 ## Acknowledgment
 
-The code is based on [Mask2Former](https://github.com/facebookresearch/Mask2Former).
+The code is based on [MaskCLIP](https://maskclip.github.io), [Mask2Former](https://github.com/facebookresearch/Mask2Former) and [CLIP](https://github.com/openai/CLIP).
 
-## Related Work
 
-```BibTeX
-@inproceedings{ding2023maskclip,
-    author    = {Ding, Zheng and Wang, Jieke and Tu, Zhuowen},
-    title     = {Open-Vocabulary Universal Image Segmentation with MaskCLIP},
-    booktitle = {International Conference on Machine Learning},
-    year      = {2023},
-}
-```
 
 ## Citation
 
-Please cite this work if you find it useful:
+Please consider citing MasQCLIP and MaskCLIP if you find the codes useful:
 
 ```BibTeX
 @inproceedings{xu2023masqclip,
@@ -90,3 +81,14 @@ Please cite this work if you find it useful:
     pages     = {887-898},
 }
 ```
+
+```BibTeX
+@inproceedings{ding2023maskclip,
+    author    = {Ding, Zheng and Wang, Jieke and Tu, Zhuowen},
+    title     = {Open-Vocabulary Universal Image Segmentation with MaskCLIP},
+    booktitle = {International Conference on Machine Learning},
+    year      = {2023},
+}
+```
+
+
