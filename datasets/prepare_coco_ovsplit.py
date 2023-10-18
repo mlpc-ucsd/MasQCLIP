@@ -1,14 +1,13 @@
-import json
 import os
+import json
 
 from detectron2.data.datasets.builtin_meta import COCO_CATEGORIES
 
 
 val_path = "coco/annotations/instances_val2017.json"
 train_path = "coco/annotations/instances_train2017.json"
-outdir = "coco/annotations_ov_split_48_17"
-if not os.path.exists(outdir):
-    os.makedirs(outdir)
+outdir = "coco/annotations/ov_split_48_17"
+os.makedirs(outdir, exist_ok=True)
 
 seen_classes_names = ('toilet', 'bicycle', 'apple', 'train', 'laptop', 'carrot', 'motorcycle', 'oven', 'chair', 'mouse', 'boat', 'kite', 'sheep', 'horse', 'sandwich', 'clock', 'tv', 'backpack', 'toaster', 'bowl', 'microwave', 'bench', 'book', 'orange', 'bird', 'pizza', 'fork', 'frisbee', 'bear', 'vase', 'toothbrush', 'spoon', 'giraffe', 'handbag', 'broccoli', 'refrigerator', 'remote', 'surfboard', 'car', 'bed', 'banana', 'donut', 'skis', 'person', 'truck', 'bottle', 'suitcase', 'zebra')
 unseen_classes_names = ('umbrella', 'cow', 'cup', 'bus', 'keyboard', 'skateboard', 'dog', 'couch', 'tie', 'snowboard', 'sink', 'elephant', 'cake', 'scissors', 'airplane', 'cat', 'knife')
@@ -63,7 +62,6 @@ for set_type in ["train", "val"]:
                 if img["id"] in images_id_set:
                     out_content["images"].append(img)
             print("images: reduce %d to %d \n" %(len(content["images"]), len(out_content["images"])))
-
 
             with open(out_json_path, "w") as fout:
                 json.dump(out_content, fout)
