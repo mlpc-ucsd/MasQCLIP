@@ -1,6 +1,6 @@
 # MasQCLIP for Open-Vocabulary Universal Image Segmentation
 
-[Xin Xu*](mailto:xinx8@illinois.edu), [Tianyi Xiong*](https://tyxiong23.github.io/), [Zheng Ding](mailto:zhding@ucsd.edu) and [Zhuowen Tu](http://www.cogsci.ucsd.edu/~ztu/) &nbsp; \*Equal Contribution
+[Xin Xu*](mailto:xinx8@illinois.edu), [Tianyi Xiong*](https://tyxiong23.github.io/), [Zheng Ding](mailto:zhding@ucsd.edu) and [Zhuowen Tu](http://www.cogsci.ucsd.edu/~ztu/) &nbsp; (\*Equal Contribution)
 
 This is the repository for [*MasQCLIP for Open-Vocabulary Universal Image Segmentation*](https://openaccess.thecvf.com/content/ICCV2023/html/Xu_MasQCLIP_for_Open-Vocabulary_Universal_Image_Segmentation_ICCV_2023_paper.html), published at **ICCV 2023**.
 
